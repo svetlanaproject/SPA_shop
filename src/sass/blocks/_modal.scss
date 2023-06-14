@@ -1,0 +1,117 @@
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0, .56);
+    &_active {
+        display: block;
+    }
+}
+.feed-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    input {
+        height: 50px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        margin-bottom: 15px;
+        border: none;
+        padding: 0 20px;
+        color: #4b4b4b;
+        font-size: 14px;
+        font-weight: 300;
+        width: 260px;
+    }
+    // .button_submit {
+    //     width: 0px;
+        
+    // }
+}
+.modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    min-height: 300px;
+    background-color: #f2f2f2;
+    padding: 38px 40px 40px 40px;
+    &_active {
+        display: block;
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        font-size: 41px;
+        line-height: 21px;
+        color: $main-color;
+        cursor: pointer;
+    }
+    &__subtitle {
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__descr {
+        color: #0d0d0d;
+        font-size: 14px;
+        font-weight: 500;
+        //padding-left: 57px;
+        ul {
+            padding-left: 10px;
+            .item_name {
+                float: left;
+            }
+            .item_price {
+                float: right;
+            }
+            .item_remove {
+                float: right;
+                padding-left: 10px;
+                color: $main-color;
+                cursor: pointer;
+            }
+            .item_num {
+                float: right;
+                margin-right: 15px;
+            }
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 15px;
+        width: 300px;
+    }
+    &__price {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        order: 1;
+    }
+    &.pay {
+        min-width: 420px;
+        width: auto;
+    }
+    &_mini {
+        min-height: 100px;
+        width: 250px;
+    }
+    &.consultation {
+        .modal__descr {
+            text-align: center;
+        }
+    }
+}

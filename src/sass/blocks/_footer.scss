@@ -1,0 +1,32 @@
+*
+.footer {
+    height: 630px;
+    position: relative;
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 270px;
+        height: 100px;
+        background-color: $main-color;
+        padding: 30px 30px 30px 30px;
+        //opacity: 90%;
+    }
+    &__addr {
+        margin-bottom: 30px;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &__phone {
+        display: block;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        &:hover {
+            color: #ffffff;
+        }
+    }  
+}
